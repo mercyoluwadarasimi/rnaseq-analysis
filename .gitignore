@@ -47,3 +47,6 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+# Raw sequencing data 
+data/raw/*.fastq
+data/raw/*.fastq.gz
