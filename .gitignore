@@ -25,6 +25,31 @@
 vignettes/*.html
 vignettes/*.pdf
 
+# Raw sequencing files
+*.fastq
+*.fastq.gz
+
+# HISAT2 index files
+*.ht2
+
+# Large reference genomes
+*.fa
+*.fasta
+*.fna
+*.gtf
+*.gff
+
+# Large compressed downloads
+*.tar.gz
+*.zip
+
+# MultiQC data directory (optional)
+results/multiqc/multiqc_data/
+
+# Conda environment folders (if created locally)
+.env
+.conda
+
 # OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3
 .httr-oauth
 
@@ -50,3 +75,18 @@ rsconnect/
 # Raw sequencing data 
 data/raw/*.fastq
 data/raw/*.fastq.gz
+# Reference files
+reference/
+
+# Alignment outputs
+*.bam
+*.sam
+
+# HISAT2 index
+*.ht2
+
+# FeatureCounts outputs (generated files)
+counts/
+
+# Temporary download folders
+fasterq.tmp.*

@@ -1,15 +1,39 @@
-# RNA-seq Analysis
+# RNA-seq Analysis Pipeline
 
-## Name
-Mercy Odeyemi
+## Dataset Description
 
-## Program Title
-Applied Genomics
+This project uses a publicly available RNA-seq dataset from NCBI Sequence Read Archive (SRA) under BioProject **PRJNA379959** (GSE96870). The dataset contains paired-end RNA sequencing data generated from the cerebellum of female C57BL/6 mice under non-infected and Influenza A infection conditions at different time points.
 
-## Description
+## Samples
 
-RNA sequencing (RNA-seq) is a next-generation sequencing (NGS) technique used to study the complete set of RNA molecules (the transcriptome) in a biological sample. It enables researchers to measure gene expression levels, identify differentially expressed genes, discover novel transcripts, detect alternative splicing events, and investigate biological processes under different conditions. RNA-seq is widely used in genomics, biomedical research, and precision medicine because it provides a comprehensive and accurate view of gene activity.
+The dataset contains six RNA-seq samples:
 
-## Repository Overview
+| Sample ID | Condition |
+|-----------|-----------|
+| SRR5364316 | Non-Infected (Day 0) |
+| SRR5364317 | Non-Infected (Day 0) |
+| SRR5364318 | Influenza A (Day 4) |
+| SRR5364323 | Influenza A (Day 4) |
+| SRR5364321 | Influenza A (Day 8) |
+| SRR5364330 | Influenza A (Day 8) |
 
-This repository contains the folder structure and scripts for an end-to-end RNA-seq analysis workflow, from data acquisition and quality control through sequence alignment, read counting, and downstream differential gene expression analysis in R.
+## Organism
+
+**Mus musculus** (Mouse)
+
+## Sequencing Platform
+
+- Illumina HiSeq 2500
+- Paired-end RNA sequencing
+
+## Quality Control
+
+Raw sequencing reads were assessed using **FastQC**, and the reports were summarized using **MultiQC**.
+
+The quality assessment showed:
+
+- High per-sequence quality scores (most reads > Q30)
+- Expected GC-content distribution for RNA-seq libraries
+- Minimal adapter contamination
+
+Because the sequencing reads were already of high quality, additional trimming with **fastp** was not required before downstream analysis.
